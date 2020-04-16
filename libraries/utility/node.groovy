@@ -1,5 +1,7 @@
 void call(Closure body) {
-        steps.node('dev-slave') {
+    steps.podTemplate(inheritFrom: 'dev-slave') {
+        steps.node(POD_LABEL) {
             body()
         }
+    }
 }
