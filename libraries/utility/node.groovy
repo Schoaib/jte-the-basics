@@ -1,5 +1,5 @@
 void call(Closure body) {
-        steps.node(dev-slave) {
+        steps.node('dev-slave') {
             body()
         }
 }
